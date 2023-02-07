@@ -1,0 +1,50 @@
+[
+  {
+    "model": "person.address",
+    "pk": 1,
+    "fields": {
+      "number": "5",
+      "street": "Lithgow Street Homebush",
+      "city": "Sydney",
+      "state": "NSW"
+    }
+  },
+  {
+    "model": "person.address",
+    "pk": 2,
+    "fields": {
+      "number": "2",
+      "street": "Cooper Street Strathfield",
+      "city": "Sydney",
+      "state": "NSW"
+    }
+  },
+  {
+    "model": "person.address",
+    "pk": 3,
+    "fields": {
+      "number": "5",
+      "street": "Nipper Street Glenfield",
+      "city": "Sydney",
+      "state": "NSW"
+    }
+  },
+  {
+    "model": "person.person",
+    "pk": 1,
+    "fields": {
+      "email": "mika@ss.com",
+      "name": "Mika Shams",
+      "address": 1
+    }
+  },
+  {
+    "model": "person.person",
+    "pk": 2,
+    "fields": {
+      "email": "fifa@jjs.com",
+      "name": "Fifa Johnson",
+      "address": 2
+    }
+  }
+]
