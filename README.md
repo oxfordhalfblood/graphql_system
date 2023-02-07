@@ -7,12 +7,19 @@ It's using Django framework.
 - Create a virtual env with `python3 -m venv env` and `. env/bin/activate`
 - run `pip3 install -r requirements.txt`
 - `python manage.py migrate`
-- Load some initial data
-  - `python manage.py loaddata graphql_system/person/fixtures/person_data.json`
+- Load some initial data(use any option)
+  - option1: `python manage.py loaddata graphql_system/person/fixtures/person_data.json`
+  - option2:
+    - Create user from terminal `python manage.py createsuperuser`
+    - run `python manage.py runserver`
+    - go to http://127.0.0.1:8000/admin/
+    - Add an Address and Person using the admin panel
 - Then run `python manage.py runserver`
 - Go to http://127.0.0.1:8000/graphql/ for testing graphql queries
 
 ### Sample graphql queries to use:
+
+- Query to display all the persons:
 
 `query {
   person {
@@ -26,6 +33,8 @@ It's using Django framework.
     }
   }
 }`
+
+- Query to display a specific person when given an ID:
 
 `query {
   getPerson(id:1) {
@@ -41,6 +50,7 @@ It's using Django framework.
   }
 }`
 
+- Create a Person with an Address
 
 `mutation {
   createPerson(
@@ -68,6 +78,8 @@ It's using Django framework.
       }
 	}
 }`
+
+- Update some data of an existing Person
 
 `mutation {
   updatePerson(
